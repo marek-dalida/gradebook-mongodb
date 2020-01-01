@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Product</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edytuj Ocenę</h1>
+    <br />
+    <form action="#" th:action="@{/marks}" th:object="${mark}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>ID:</td>
+                <td>
+                    <input type="text" th:field="*{id}" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td>Ocena:</td>
+                <td><input type="text" th:field="*{markValue}" /></td>
+            </tr>
+            <tr>
+                <td>Opis:</td>
+                <td><input type="text" th:field="*{markDescription}" /></td>
+            </tr>
+            <tr>
+                <td>Data:</td>
+                <td><input type="text" th:field="*{date}" /></td>
+            </tr>
+            <tr>
+                <td>Waga oceny:</td>
+                <td><input type="text" th:field="*{markWage}" /></td>
+            </tr>
+            <tr>
+                <td>Nr indeksu studenta:</td>
+                <td><input type="text" th:field="*{student.studentId}" /></td>
+            </tr>
+            <tr>
+                <td>Imię studenta:</td>
+                <td><input type="text" th:field="*{student.firstName}" /></td>
+            </tr>
+            <tr>
+                <td>Nazwisko studenta:</td>
+                <td><input type="text" th:field="*{student.lastName}" /></td>
+            </tr>
+            <tr>
+                <td>Imię nauczyciela:</td>
+                <td><input type="text" th:field="*{teacher.firstName}" /></td>
+            </tr>
+            <tr>
+                <td>Nazwisko nauczyciela:</td>
+                <td><input type="text" th:field="*{teacher.lastName}" /></td>
+            </tr>
+            <tr>
+                <td>Nazwa przedmiotu:</td>
+                <td><input type="text" th:field="*{subject.subjectName}" /></td>
+            </tr>
+            <tr>
+                <td>Ilość godzin:</td>
+                <td><input type="text" th:field="*{subject.numOfHours}" /></td>
+            </tr>
+            <tr>
+                <td>Ilość punktów ects:</td>
+                <td><input type="text" th:field="*{subject.ectsPoints}" /></td>
+            </tr>
+            <tr>
+                <td>Semestr:</td>
+                <td><input type="text" th:field="*{subject.semester}" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Zapisz</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
