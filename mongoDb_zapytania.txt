@@ -1,0 +1,7 @@
+Komendy MongoDb
+1) { "teacher.firstName": "Anna", "teacher.lastName" : "Suchenia" }
+2) {"subject.subjectName": "Technologie Obiektowe" }
+3) {markValue : 5.0 }
+4) {"student.firstName": "Marek", "student.lastName" : "Dalida", "subject.subjectName" : "Inżynieria Programowania" }
+5)  {"subject.semester" : 5 }
+6) {$group: { _id:"subject.subjectName", avg: {$avg: markValue } } }
